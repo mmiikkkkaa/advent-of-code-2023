@@ -1,4 +1,4 @@
-package net.mikka.adventofcode2022
+package net.mikka.adventofcode2023
 
 class ResourceReader {
     fun readLinesFromResourceFile(file: String): List<String> {

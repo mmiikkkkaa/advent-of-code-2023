@@ -1,4 +1,4 @@
-package net.mikka.adventofcode2022
+package net.mikka.adventofcode2023
 
 abstract class PuzzleDay<T1, T2> {
 
