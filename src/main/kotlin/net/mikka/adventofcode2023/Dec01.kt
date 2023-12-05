@@ -33,8 +33,6 @@ class Dec01 : PuzzleDay<Int, Int>() {
                 val lastDigit = buildRegex(true).find(entry.reversed())!!.value.reversed().replaceToDigit()
                 val number = "$firstDigit$lastDigit"
                 sum += number.toInt()
-                println("line $entry -> $number sums up to $sum" )
-
             }
             return sum
         }
