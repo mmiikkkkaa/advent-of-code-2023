@@ -1,15 +1,24 @@
 package net.mikka.adventofcode2023
 
 import java.time.LocalDate
+import kotlin.system.measureTimeMillis
 
 abstract class PuzzleDay<T1, T2> {
 
     private val inputFile = "/" + this::class.simpleName!!.lowercase() + ".txt"
     private lateinit var input: List<String>
 
+
     fun solve() {
-        println("${this::class.simpleName}.Puzzle01: " + getPuzzle1().solve(input = testInput()))
-        println("${this::class.simpleName}.Puzzle02: " + getPuzzle2().solve(input = testInput()))
+
+        var timeInMs = measureTimeMillis {
+            print("${this::class.simpleName}.Puzzle01: " + getPuzzle1().solve(input = testInput()))
+        }
+        println(" (in $timeInMs ms)")
+        timeInMs = measureTimeMillis {
+            print("${this::class.simpleName}.Puzzle02: " + getPuzzle2().solve(input = testInput()))
+        }
+            println(" (in $timeInMs ms)")
         println("###################")
     }
 
